@@ -35,7 +35,7 @@ public class SplashActivity extends AppCompatActivity {
     //由于CountDownTimer有一定的延迟，所以这里设置3400
     private CountDownTimer countDownTimer = new CountDownTimer(3400, 1000) {
         @Override
-        public void onTick(long millisUntilFinished) {
+        public void onTick(long millisUntilFinished) { // 提示
             mSpJumpBtn.setText("跳过(" + millisUntilFinished / 1000 + "s)");
         }
 

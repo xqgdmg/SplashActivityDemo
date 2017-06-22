@@ -34,6 +34,9 @@ public class SplashDownLoadService extends IntentService {
         super("SplashDownLoad");
     }
 
+    /*
+     * 又是自己启动自己的方法
+     */
     public static void startDownLoadSplashImage(Context context, String action) {
         Intent intent = new Intent(context, SplashDownLoadService.class);
         intent.putExtra(Constants.EXTRA_DOWNLOAD, action);
