@@ -27,7 +27,7 @@ import static com.example.wsj.splashdemo.entity.Constants.API_DEBUG_SERVER_URL;
  * eg: 全局 单利网络请求Client 请求方法 调用静态方法getInstance().***(); 其中*** 为ApiStore中定义的请求方法
  */
 
-public class HttpClient {
+public class RetrofitClient {
 
     private static final int CONNECT_TIME_OUT = 3000;
     private static final int READ_TIME_OUT = 5000;
@@ -37,7 +37,7 @@ public class HttpClient {
 
     private Context mContext;
 
-    public HttpClient(Context context) {
+    public RetrofitClient(Context context) {
         mContext = context;
     }
 

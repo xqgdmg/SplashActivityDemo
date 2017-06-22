@@ -11,7 +11,7 @@ import android.util.Log;
 import com.example.wsj.splashdemo.entity.Common;
 import com.example.wsj.splashdemo.entity.Constants;
 import com.example.wsj.splashdemo.entity.Splash;
-import com.example.wsj.splashdemo.http.HttpClient;
+import com.example.wsj.splashdemo.http.RetrofitClient;
 import com.example.wsj.splashdemo.utils.DownLoadUtils;
 import com.example.wsj.splashdemo.utils.SerializableUtils;
 
@@ -54,7 +54,7 @@ public class SplashDownLoadService extends IntentService {
     }
 
     private void loadSplashNetDate() {
-        HttpClient.getInstance()
+        RetrofitClient.getInstance()
                 .getSplashImage(TYPE_ANDROID)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
